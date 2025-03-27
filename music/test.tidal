@@ -9,7 +9,9 @@ d1 $ s "sax*32"
 # cut 1
 # vowel "<a e i o u>*2"
 
-d2 $ sound "hh/2"
+d2 $ sound "sd*4"
+
+d2 $ sound "[bd sd]*5"
 # coarse 16
 # crush 16
 
@@ -23,12 +25,12 @@ d2 $ s "sn*4"
 d2 $ s "sn sn sn sn"
 # bpf "[400, 800, 1600, 4000]"
 
-d2 $ s "moog"
+d1 $ s "moog*2"
 # cut 1
 # lpf 600
 # ring 50
 # ringf "400"
-# ringdf 4000 -- positive number slides up negative number slides down
+# ringdf "-4000" -- positive number slides up negative number slides down
 
 d1 $ s "hh(3,8)" -- euclidean sequences 3 notes into 8 slots
 
