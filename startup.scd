@@ -32,8 +32,6 @@ s.reboot { // server options are only updated on reboot
 
     s.latency = 0.3; // increase this if you get "late" messages
 };
-);
-
 
 // This code forwards messages from tidal to an additional port via OSC.
 // From https://github.com/tado/ofxTidalCycles
@@ -47,3 +45,4 @@ OSCFunc.newMatching({ |msg, time, addr, port|
 	hydraAddr.sendBundle(latency, msg)
 }, '/dirt/play', tidalAddr);
 SuperDirt.start;
+);
