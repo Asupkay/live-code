@@ -11,7 +11,7 @@ d1 $ s "sax*32"
 
 d2 $ sound "sd*4"
 
-d2 $ sound "[bd sd]*5"
+d2 $ sound "[bd sd] * 2"
 # coarse 16
 # crush 16
 

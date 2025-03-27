@@ -78,8 +78,8 @@ osc(20, 0.1, 0.8)
 //
 
 // define variables for frequency and number of sides in kaleidoscope
-freq = 10
-numSides = 0
+let freq = 10
+let numSides = 0
 //
 msg.on('/dirt/play', (args) => {
   // parse the values from tidal
