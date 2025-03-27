@@ -1,6 +1,6 @@
 # Live code
 
-This repository is for live coding with TidalCycles and Hyrda.
+This repository is for live coding with TidalCycles and Hydra.
 
 # Startup instructions
 
