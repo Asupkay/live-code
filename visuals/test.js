@@ -43,6 +43,7 @@ msg.on('/dirt/play', (args) => {
 
 // define a variable to contain a blend value
 let blend = 0
+let rotation = .2
 //
 
 // receive args from supercollider in hydra. Tidal sends OSC messages
@@ -52,6 +53,7 @@ msg.on('/dirt/play', (args) => {
   // parse the values from tidal
  var tidal = parseTidal(args)
 //
+ rotation+=.01
   setTimeout(() => {
     //
     // If the tidal sample is "sd", set blend to 0, if it is bd, set blend to 1
@@ -61,13 +63,13 @@ msg.on('/dirt/play', (args) => {
      } else if (tidal.s === "bd"){
          blend = 1
      }
-     //
+      //
   }, tidal.delta * 1000)
 })
 
 // use the variable "blend" in a hydra function
 osc(20, 0.1, 0.8)
-  .rotate(0.2)
+  .rotate(() => rotation)
   .mult(osc(100), () => blend)
   .out()
 

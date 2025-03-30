@@ -1,0 +1,43 @@
+setcps (90/60/4)
+
+hush
+
+d1 $ n "[10 11]/2" # s "juno"
+# amp "0.3"
+# fshift "<0 1 2>"
+# fshiftnote "<-1 1>"
+
+d2 $ every 1 (const $ s "[bd sd bd [sd sd]*1]" # coarse 16
+# crush 16)
+$ s "[bd sd] * 2"
+# coarse 16
+# crush 16
+
+d3 $ s "sn*128"
+# coarse 16
+# crush 16
+
+d4 $ n "4"
+# s "trump"
+# amp "0.2"
+
+d3 $ s "[rave:2*4]"
+# speed 1.2
+# fshift "<0 1 2>"
+# fshiftnote "<-1 2 -3>"
+
+d3 silence
+d2 silence
+d1 silence
+
+d4 $ n "[c4'maj e4'min f4'maj f4'min]" # s "superchip"
+# amp "0.2"
+# dry "0.2"
+# room "0.7"
+# size "0.6"
+
+d3 $ s "[rave:5]*2"
+# speed 1.2
+# amp "<0.8 0.9>"
+# fshift "<0 1 2>"
+# fshiftnote "<-1 2 -3>"
